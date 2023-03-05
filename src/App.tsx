@@ -228,7 +228,9 @@ function App() {
     
       default:
         mask[y * Size + x] = Mask.Flag
-        setBombsCounter(prev => prev - 1)
+        if (bombsCounter > 0) {
+          setBombsCounter(prev => prev - 1)
+        }
         if (field[y * Size + x] === -1) {
           field[y * Size + x] = -3
         }
