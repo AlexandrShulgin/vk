@@ -123,6 +123,7 @@ function App() {
   
   useEffect(() => {
     if (bombsCounter === 0) {
+
       setFace('ez')
     }
     timer > 0 && setTimeout(() => setTimer(gameOver ? timer : timer - 1), 1000);
@@ -216,6 +217,7 @@ function App() {
         if (bombsCounter === 0) {
           for (let i = 0; i < bombs.length; i++) {
             if (bombs.map(el => mask[el] !== Mask.Flag)) {
+              setFace('ez')
               break
             }
           }
