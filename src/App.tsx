@@ -125,7 +125,7 @@ function App() {
     if (bombsCounter === 0) {
       setFace('ez')
     }
-    timer > 0 && setTimeout(() => setTimer(gameOver ? timer : timer - 1), 10);
+    timer > 0 && setTimeout(() => setTimer(gameOver ? timer : timer - 1), 1000);
     setSecondImage(minute + 10)
     if (minute === 0) {
       endOfGame()
